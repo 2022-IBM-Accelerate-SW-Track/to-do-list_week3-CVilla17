@@ -5,12 +5,12 @@
   z-index: -1;
   top: 0;
   overflow-x: hidden;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .left {
   left: 0;
-  background-color: #0f62fe;
+  background-color: #afc4eb;
 }
 
 .right {
@@ -26,10 +26,12 @@
 }
 
 .name_title {
-  font-size: 48px;
+  font-size: 60px;
+  font-family: Brush Script MT;
   color: black;
-  text-align: left;
+  text-align: center;
   padding-bottom: 20px;
+  padding-top: 0px;
 }
 
 .brief_description {
@@ -37,6 +39,7 @@
 }
 
 .profile_image {
-  width: 500px;
+  width: 450px;
   height: auto;
+  border-radius: 25px;
 }
