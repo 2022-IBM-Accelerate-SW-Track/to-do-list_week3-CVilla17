@@ -20,13 +20,16 @@ class Home extends Component {
     // This solution works for a small application but a more complex hashing function should be used when
     // dealing with a larger data sensitive project.
     todo.id = Math.random();
+
     // Create a array that contains the current array and the new todo item
+    if (todo.due === null || todo.due === "Invalid Date") {
+      alert("Add a valid due date to your task");
+      return;
+    }
     if (this.state.todos.find((t) => t.content === todo.content.trim())) {
       let existing = this.state.todos.find(
         (t) => t.content === todo.content.trim()
       );
-      console.log(existing);
-
       if (
         window.confirm(
           `The task "${todo.content}" already exists, it was created on ${existing.date}.\nAdd it anyway?`
@@ -39,10 +42,6 @@ class Home extends Component {
       } else {
         return;
       }
-
-      // alert(
-      //   `The task "${todo.content}" already exists, it was created on ${existing.date}`
-      // );
     } else {
       let new_list = [...this.state.todos, todo];
       this.setState({
